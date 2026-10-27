@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-24",
+  "baseline": "2b8863d8f39e6e6fa57de61757528b982b5e870b",
+  "status": "passed",
+  "notes": 39,
+  "modules": 12,
+  "questions": 60,
+  "source_files": 80,
+  "checks": [
+    {
+      "name": "笔记模板、相对路径与标签",
+      "count": 39
+    },
+    {
+      "name": "主要领域与完整模块章节",
+      "count": 12
+    },
+    {
+      "name": "练习及四类必要题型、中文折叠答案",
+      "count": 60
+    },
+    {
+      "name": "MOC 覆盖与 wiki-links",
+      "count": 322
+    },
+    {
+      "name": "项目内来源文件、符号定位与 SHA256",
+      "count": 80
+    },
+    {
+      "name": "命令清单匹配与定向测试来源",
+      "count": "23 条脚本 / 9 个测试引用"
+    }
+  ],
+  "errors": [],
+  "not_run": [
+    "project-builds-and-tests",
+    "live-models",
+    "native-apps-and-devices",
+    "obsidian-rendering"
+  ]
+}

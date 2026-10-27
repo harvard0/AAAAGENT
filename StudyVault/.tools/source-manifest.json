@@ -1,0 +1,1066 @@
+{
+  "baseline": "2b8863d8f39e6e6fa57de61757528b982b5e870b",
+  "date": "2026-10-24",
+  "tags": {
+    "dashboard": "导航入口",
+    "onboarding": "上手学习",
+    "quick-reference": "命令速查",
+    "practice": "折叠答案练习",
+    "arch-system": "系统边界",
+    "arch-request-flow": "请求链路",
+    "arch-data-flow": "持久化与来源",
+    "module-runtime": "运行时",
+    "module-memory": "私人记忆",
+    "module-model-media": "模型与媒体",
+    "module-social": "角色社交",
+    "module-workbench": "工作执行",
+    "module-management": "管理页",
+    "module-channels": "消息渠道",
+    "module-t3-server": "T3 服务端",
+    "module-t3-client": "T3 客户端",
+    "module-desktop": "桌面宿主",
+    "module-local-models": "本地模型",
+    "module-t3-packages": "T3 共享包",
+    "pattern-ports": "能力接口与装配",
+    "pattern-background-jobs": "后台任务",
+    "pattern-provenance": "来源与版本",
+    "pattern-idempotency": "去重及未知结果",
+    "pattern-rpc": "类型化远程调用",
+    "pattern-event-stream": "事件与投影",
+    "config-environment": "环境配置",
+    "test-validation": "检查及证据",
+    "api-management": "管理 HTTP",
+    "api-social": "社交 HTTP",
+    "api-workbench": "工作台 RPC"
+  },
+  "sources": {
+    "code/desktop-pet/app/backend-session.ts": {
+      "sha256": "3e93668edf9d50a90f34aa4d9788902e81e4bc43c1d3ee5c528481b201f9ac50",
+      "lines": 214,
+      "references": [
+        {
+          "note": "运行时与对话编排",
+          "line": 109,
+          "locator": "export class BackendSession"
+        }
+      ]
+    },
+    "code/desktop-pet/core/desktop-runtime.ts": {
+      "sha256": "edd9f7a773a67e869eb7c6daae91efd2c3b03325bb235ea5f6dbb0bed5a3204c",
+      "lines": 129,
+      "references": [
+        {
+          "note": "运行时与对话编排",
+          "line": 9,
+          "locator": "export class DesktopRuntime"
+        }
+      ]
+    },
+    "code/desktop-pet/core/dialogue-pipeline.ts": {
+      "sha256": "ed14b50433ec79b865cefeabb8b0a40f90af64e8805e129d9be0b6c5be556517",
+      "lines": 205,
+      "references": [
+        {
+          "note": "运行时与对话编排",
+          "line": 54,
+          "locator": "async run("
+        }
+      ]
+    },
+    "code/desktop-pet/core/memory-lifecycle-queue.ts": {
+      "sha256": "360f4fa5b9cc8d98a22add628e86f036ca774ca0434f0ff9093e2bdd9555c557",
+      "lines": 114,
+      "references": [
+        {
+          "note": "运行时与对话编排",
+          "line": 6,
+          "locator": "export class RoleMemoryLifecycleQueue"
+        }
+      ]
+    },
+    "code/desktop-pet/tests/integration/backend-session.test.ts": {
+      "sha256": "e8013e94a5c24ae8d92cab6218f323190ab518f49632caa8d2e8fe138e138dfc",
+      "lines": 225,
+      "references": [
+        {
+          "note": "运行时与对话编排",
+          "line": 1,
+          "locator": null
+        }
+      ]
+    },
+    "code/desktop-pet/memory/context.ts": {
+      "sha256": "92c55f791aed5ad81582012edad98cf7e3f5b4317062c4f2a9a916125dd3e2e1",
+      "lines": 152,
+      "references": [
+        {
+          "note": "私人记忆与上下文",
+          "line": 52,
+          "locator": "export function assembleContext"
+        }
+      ]
+    },
+    "code/desktop-pet/memory/sqlite-lifecycle-port.ts": {
+      "sha256": "5a34dffa5857c9ba078b1193f2ffc1769a7153694a6ff051f65f981f93212fd0",
+      "lines": 93,
+      "references": [
+        {
+          "note": "私人记忆与上下文",
+          "line": 14,
+          "locator": "export class SqliteLifecycleMemoryPort"
+        }
+      ]
+    },
+    "code/desktop-pet/memory/dynamics.ts": {
+      "sha256": "2ce2e287b02a98b989cf01bec8ebb6c2a2cb6b9ecddad1a30a3f8c1a767cfd62",
+      "lines": 60,
+      "references": [
+        {
+          "note": "私人记忆与上下文",
+          "line": 51,
+          "locator": "export function priority"
+        }
+      ]
+    },
+    "code/desktop-pet/memory/sqlite-recall.ts": {
+      "sha256": "0d4c84a609825cd2a88607ded6499d6cfe1828e620201520cc0c7a87071988f0",
+      "lines": 133,
+      "references": [
+        {
+          "note": "私人记忆与上下文",
+          "line": 1,
+          "locator": null
+        }
+      ]
+    },
+    "docs/MEMORY.md": {
+      "sha256": "14e3fe117025bc73c6a170e6776d0f50052825be68e669a9e6f58c46e294ae56",
+      "lines": 166,
+      "references": [
+        {
+          "note": "私人记忆与上下文",
+          "line": 1,
+          "locator": null
+        }
+      ]
+    },
+    "code/desktop-pet/providers/transport.ts": {
+      "sha256": "f33a0c4ac3615d3aba5029eed4247222b49ed87d5ce8d93dfd7c9531d4117a0e",
+      "lines": 135,
+      "references": [
+        {
+          "note": "模型适配与媒体链路",
+          "line": 45,
+          "locator": "export class ProviderTransport"
+        }
+      ]
+    },
+    "code/desktop-pet/providers/qwen-dialogue.ts": {
+      "sha256": "7466d939ff6962e18a950124a4296d6e6ea8fef5e0e01da3b3abd09ae227ec81",
+      "lines": 97,
+      "references": [
+        {
+          "note": "模型适配与媒体链路",
+          "line": 24,
+          "locator": "export class JsonDialogueProvider"
+        }
+      ]
+    },
+    "code/desktop-pet/providers/input-count.ts": {
+      "sha256": "dd8eba22dc6d628860b3bade5cb2939b18e054f07776908ab56add9a039abf6e",
+      "lines": 39,
+      "references": [
+        {
+          "note": "模型适配与媒体链路",
+          "line": 23,
+          "locator": "export function inputBudgetInfo"
+        }
+      ]
+    },
+    "code/desktop-pet/media/capture.ts": {
+      "sha256": "996b09e2c12cbc8f81c43badf9ffec7a8277ea2b80bbedd12aca9b3f056a6e6a",
+      "lines": 67,
+      "references": [
+        {
+          "note": "模型适配与媒体链路",
+          "line": 14,
+          "locator": "export class TurnCapture"
+        }
+      ]
+    },
+    "code/desktop-pet/config/providers.example.json": {
+      "sha256": "0ba3f6f2758f4829c7aa98b1a7f38050c033231eaea86b817467b386f61d5cbd",
+      "lines": 96,
+      "references": [
+        {
+          "note": "模型适配与媒体链路",
+          "line": 1,
+          "locator": null
+        }
+      ]
+    },
+    "code/desktop-pet/companion/cloud/server.ts": {
+      "sha256": "09614da9b3d3c090ee3d9d312b0c5d5184bd35e5b17483ce1d64622f269e8148",
+      "lines": 71,
+      "references": [
+        {
+          "note": "角色社交服务与缓存",
+          "line": 35,
+          "locator": "export async function startSocialServer"
+        }
+      ]
+    },
+    "code/desktop-pet/companion/cloud/store.ts": {
+      "sha256": "8acbf40dadafdbfc0edf17c4559424d56e6ab991359e107f6ea574edaf95e668",
+      "lines": 196,
+      "references": [
+        {
+          "note": "角色社交服务与缓存",
+          "line": 8,
+          "locator": "export class SocialStore"
+        }
+      ]
+    },
+    "code/desktop-pet/companion/cloud/local.ts": {
+      "sha256": "ced90dc61b77488dc988f8320bfa3f857c74343b8b3dbccc90c67287d346339f",
+      "lines": 112,
+      "references": [
+        {
+          "note": "角色社交服务与缓存",
+          "line": 9,
+          "locator": "export class LocalSocialConnection"
+        }
+      ]
+    },
+    "windows/code/desktop-pet/companion/cloud/server.ts": {
+      "sha256": "3c17b83ceb3aa77b8f931161f7277a2b0291122b7a105bcab95615ff0d6fed58",
+      "lines": 72,
+      "references": [
+        {
+          "note": "角色社交服务与缓存",
+          "line": 59,
+          "locator": "route==='participations'"
+        }
+      ]
+    },
+    "docs/SOCIAL_PROTOCOL.md": {
+      "sha256": "983ae881fec0539d6f325c8603b583b142958b3cac7d19216351f4ae685bb144",
+      "lines": 68,
+      "references": [
+        {
+          "note": "角色社交服务与缓存",
+          "line": 1,
+          "locator": null
+        }
+      ]
+    },
+    "code/desktop-pet/harness/desktop-work.ts": {
+      "sha256": "341b6a8e6da697d9d41ca25d8efc62af3ba5ce44867f2500fc101b43e89b8ac0",
+      "lines": 516,
+      "references": [
+        {
+          "note": "工作执行与项目上下文",
+          "line": 41,
+          "locator": "export class DesktopWork"
+        }
+      ]
+    },
+    "code/desktop-pet/harness/receipts.ts": {
+      "sha256": "23e2f4437717dc891298deea1b50c47ce4ea08ccfd3448243c37346f292f21f8",
+      "lines": 207,
+      "references": [
+        {
+          "note": "工作执行与项目上下文",
+          "line": 53,
+          "locator": "export class ForwardReceipts"
+        }
+      ]
+    },
+    "code/desktop-pet/app/desktop-workbench.ts": {
+      "sha256": "04f4dd5e1cdda603bd662be0890c87920f89c46764d09d781a8035b59f114cb0",
+      "lines": 618,
+      "references": [
+        {
+          "note": "工作执行与项目上下文",
+          "line": 224,
+          "locator": "export class DesktopWorkbench"
+        }
+      ]
+    },
+    "code/desktop-pet/workbench/commands.ts": {
+      "sha256": "e3180b4fce4d3be9ed3bebb6315821f308807f23f1420995acb317c7fb740037",
+      "lines": 193,
+      "references": [
+        {
+          "note": "工作执行与项目上下文",
+          "line": 152,
+          "locator": "export class WorkbenchTurnGateway"
+        }
+      ]
+    },
+    "code/desktop-pet/projects/project-context-assembler.ts": {
+      "sha256": "7288c75a1c72e9ef7fc2c948fa6b97ba9f6a61102ea004d61e385f6cfb04d632",
+      "lines": 79,
+      "references": [
+        {
+          "note": "工作执行与项目上下文",
+          "line": 34,
+          "locator": "export class ProjectContextAssembler"
+        }
+      ]
+    },
+    "code/workbench/integration/engine-pins/engine-lock.json": {
+      "sha256": "d8a96b0ab12b575517668460a5c939c4b00a191fdcf8635101501354c07609d6",
+      "lines": 26,
+      "references": [
+        {
+          "note": "工作执行与项目上下文",
+          "line": 1,
+          "locator": null
+        }
+      ]
+    },
+    "code/desktop-pet/management/server.ts": {
+      "sha256": "6d61848333469e063862a55d0d88cf8b48ee9aa551e94f44875c0d2a3ab879e8",
+      "lines": 147,
+      "references": [
+        {
+          "note": "管理服务与配置",
+          "line": 45,
+          "locator": "export async function startManagementServer"
+        }
+      ]
+    },
+    "code/desktop-pet/management/bootstrap.ts": {
+      "sha256": "b280fbd88b3e2ec225961c40b06c24cb2905d77d17d2cbed5575133d0411f88d",
+      "lines": 222,
+      "references": [
+        {
+          "note": "管理服务与配置",
+          "line": 54,
+          "locator": "export async function startRuntimeManagement"
+        }
+      ]
+    },
+    "code/desktop-pet/management/settings-store.ts": {
+      "sha256": "95806720ab46bb67f3f24d024d57f48f4a0b3448139b7801e73523992ca9a585",
+      "lines": 61,
+      "references": [
+        {
+          "note": "管理服务与配置",
+          "line": 1,
+          "locator": null
+        }
+      ]
+    },
+    "code/desktop-pet/management/runtime.ts": {
+      "sha256": "d306edc5a587fba4e3a1142bf32b882633a362916a3089ca5a75d54b5a3fecd6",
+      "lines": 97,
+      "references": [
+        {
+          "note": "管理服务与配置",
+          "line": 22,
+          "locator": "export class ManagementRuntime"
+        }
+      ]
+    },
+    "code/desktop-pet/wechat/service.ts": {
+      "sha256": "e1844bc3dbd16cc251c88d5ccf47ca65deeafb6ef68c0b1e06281fd414795638",
+      "lines": 201,
+      "references": [
+        {
+          "note": "微信与QQ渠道适配",
+          "line": 29,
+          "locator": "export class WeChatService"
+        }
+      ]
+    },
+    "code/desktop-pet/wechat/conversation.ts": {
+      "sha256": "60a22d1d52dd66b9ce1b675ea97193a82f70639a1be26de62beb4e35db3cd11b",
+      "lines": 213,
+      "references": [
+        {
+          "note": "微信与QQ渠道适配",
+          "line": 64,
+          "locator": "export class WeChatTextConversation"
+        }
+      ]
+    },
+    "windows/code/desktop-pet/tools/pet-cloud/qq-bridge/social_bridge.py": {
+      "sha256": "75804eefd5986740b8974f40a5d2ec59b29175d6257a45bccf8f488d3679c615",
+      "lines": 121,
+      "references": [
+        {
+          "note": "微信与QQ渠道适配",
+          "line": 57,
+          "locator": "record_delivery"
+        }
+      ]
+    },
+    "windows/code/desktop-pet/tools/pet-cloud/qq-bridge/README.md": {
+      "sha256": "8f32b3b7ae55b23e131444709dd3e8b4886e74671b97ec3e605bb1ad59aa447f",
+      "lines": 13,
+      "references": [
+        {
+          "note": "微信与QQ渠道适配",
+          "line": 1,
+          "locator": null
+        }
+      ]
+    },
+    "windows/docs/SOCIAL_MEMORY.md": {
+      "sha256": "27ce497d5b24ba495768c0c4734e27371b0eceeadc013e7111e3ed08739bff73",
+      "lines": 60,
+      "references": [
+        {
+          "note": "微信与QQ渠道适配",
+          "line": 1,
+          "locator": null
+        }
+      ]
+    },
+    "t3-source/apps/server/src/bin.ts": {
+      "sha256": "cb58624284fbf3eafd07ff66f8eecc5b04bda114720d54dbe76af9000c52e4c4",
+      "lines": 93,
+      "references": [
+        {
+          "note": "T3服务端与事件编排",
+          "line": 55,
+          "locator": "export const makeCli"
+        }
+      ]
+    },
+    "t3-source/apps/server/src/ws.ts": {
+      "sha256": "4711f3cf11fb1875b7f0ab81584f3ce4a431441bcb6b77d1b199bd8386b2ec11",
+      "lines": 3909,
+      "references": [
+        {
+          "note": "T3服务端与事件编排",
+          "line": 1883,
+          "locator": "[ORCHESTRATION_WS_METHODS.dispatchCommand]"
+        }
+      ]
+    },
+    "t3-source/apps/server/src/orchestration/Services/OrchestrationEngine.ts": {
+      "sha256": "ed2291b48c069591f2227be806acd28f58403685cd2bdb7c66d42ee600e04789",
+      "lines": 117,
+      "references": [
+        {
+          "note": "T3服务端与事件编排",
+          "line": 73,
+          "locator": "readonly dispatch:"
+        }
+      ]
+    },
+    "t3-source/apps/server/src/orchestration/Layers/OrchestrationEngine.ts": {
+      "sha256": "bb95fba354080248b90ec19c591b954789b4a329da22102108e2111532f58ede",
+      "lines": 505,
+      "references": [
+        {
+          "note": "T3服务端与事件编排",
+          "line": 89,
+          "locator": "commandReceiptRepository"
+        }
+      ]
+    },
+    "t3-source/apps/server/src/orchestration/Layers/ProviderCommandReactor.ts": {
+      "sha256": "fa386679b2ce1f1df1d625a87991b47e043dda796027b35253540dfb0bd03827",
+      "lines": 2043,
+      "references": [
+        {
+          "note": "T3服务端与事件编排",
+          "line": 339,
+          "locator": "orchestrationEngine.dispatch"
+        }
+      ]
+    },
+    "t3-source/apps/server/src/orchestration/Layers/ProviderRuntimeIngestion.ts": {
+      "sha256": "a69e5dea068ea035eb1f0453e504dc62e4725921fc482160a864234002759db4",
+      "lines": 2757,
+      "references": [
+        {
+          "note": "T3服务端与事件编排",
+          "line": 493,
+          "locator": "runtimeEventToActivities"
+        }
+      ]
+    },
+    "t3-source/apps/web/src/main.tsx": {
+      "sha256": "8bd91283434fa302e830acd7b33d4df053e9baa494dd426c556638a2ef6e273f",
+      "lines": 88,
+      "references": [
+        {
+          "note": "T3客户端与共享状态",
+          "line": 22,
+          "locator": "const history ="
+        }
+      ]
+    },
+    "t3-source/apps/web/src/state/orchestration.ts": {
+      "sha256": "2e02d78a4e1c590e150b0e7258c8a7e966919635273013871646f2c5eebdbd62",
+      "lines": 5,
+      "references": [
+        {
+          "note": "T3客户端与共享状态",
+          "line": 1,
+          "locator": "createOrchestrationEnvironmentAtoms"
+        }
+      ]
+    },
+    "t3-source/apps/web/src/localApi.ts": {
+      "sha256": "f19c7a2c70ea5d5122456270f87d05870dd60979bb97ce2e39b97323e4a380f4",
+      "lines": 98,
+      "references": [
+        {
+          "note": "T3客户端与共享状态",
+          "line": 80,
+          "locator": "export function createLocalApi"
+        }
+      ]
+    },
+    "t3-source/packages/client-runtime/README.md": {
+      "sha256": "5b933967ffa958059256125260314d5a7c9d6d69e7d17eae8b40dd978459c301",
+      "lines": 37,
+      "references": [
+        {
+          "note": "T3客户端与共享状态",
+          "line": 1,
+          "locator": null
+        },
+        {
+          "note": "T3共享合同与协议包",
+          "line": 1,
+          "locator": null
+        }
+      ]
+    },
+    "t3-source/packages/client-runtime/src/rpc/client.ts": {
+      "sha256": "ce98115ea6c04b2de27174c18e0b915b0b93e280bbb126ec0a0e9c22e7a2cc4b",
+      "lines": 354,
+      "references": [
+        {
+          "note": "T3客户端与共享状态",
+          "line": 17,
+          "locator": "EnvironmentRpcUnavailableError"
+        }
+      ]
+    },
+    "code/desktop-pet/desktop/native/main.swift": {
+      "sha256": "bbd175810a3ea443b0fa2eb48d3ce3a80605ad11c1dff1a147d652eefd353a27",
+      "lines": 523,
+      "references": [
+        {
+          "note": "桌面宿主与平台边界",
+          "line": 1,
+          "locator": null
+        }
+      ]
+    },
+    "windows/code/desktop-pet/desktop/electron/main.mjs": {
+      "sha256": "2974e9e5f8c3d0c09fe30e413bb10088a2244bc8ec0d94a779493ff7cfa26fdd",
+      "lines": 218,
+      "references": [
+        {
+          "note": "桌面宿主与平台边界",
+          "line": 45,
+          "locator": "const trusted ="
+        }
+      ]
+    },
+    "windows/code/desktop-pet/desktop/electron/transport.mjs": {
+      "sha256": "92a6142de2d37eb5fc3644871f2e7a770120b4f86419c0281c2b109c47e7d186",
+      "lines": 82,
+      "references": [
+        {
+          "note": "桌面宿主与平台边界",
+          "line": 5,
+          "locator": "BackendConnection"
+        }
+      ]
+    },
+    "t3-source/apps/desktop/src/main.ts": {
+      "sha256": "e76eb4c3f393d1e92645094fb4d53e431a15bcdaa6411ee1c7f681aa980dd541",
+      "lines": 229,
+      "references": [
+        {
+          "note": "桌面宿主与平台边界",
+          "line": 1,
+          "locator": null
+        }
+      ]
+    },
+    "docs/PLATFORMS.md": {
+      "sha256": "5b7bbd4eed816f7116a3ebe4d446b6266d90d618ba43767bb9ef2b45ff13f75a",
+      "lines": 62,
+      "references": [
+        {
+          "note": "桌面宿主与平台边界",
+          "line": 1,
+          "locator": null
+        }
+      ]
+    },
+    "windows/local-models/src/cli.mjs": {
+      "sha256": "8c88a8a6e9fbb1315e20b2c183cad625269b309e12483120ab191e366cdd52c3",
+      "lines": 91,
+      "references": [
+        {
+          "note": "Windows本地模型网关",
+          "line": 79,
+          "locator": "server.listen"
+        }
+      ]
+    },
+    "windows/local-models/src/server.mjs": {
+      "sha256": "ef1767e2782ee802a042254ffa19e8ece77756710655907a1706ad28e0d25a2e",
+      "lines": 164,
+      "references": [
+        {
+          "note": "Windows本地模型网关",
+          "line": 57,
+          "locator": "export function createGateway"
+        }
+      ]
+    },
+    "windows/local-models/src/config.mjs": {
+      "sha256": "e6469a2dd93af34fedcd80b946a3d4be15596d869ade4c23672fb2657b4d5488",
+      "lines": 89,
+      "references": [
+        {
+          "note": "Windows本地模型网关",
+          "line": 13,
+          "locator": "export const nativeAsrProtocols"
+        }
+      ]
+    },
+    "windows/local-models/package.json": {
+      "sha256": "d8bdf32100338a4c9e28fbcae3d16ea3f321d5cdb1ed29dfab32c397d7e00fd6",
+      "lines": 15,
+      "references": [
+        {
+          "note": "Windows本地模型网关",
+          "line": 1,
+          "locator": null
+        }
+      ]
+    },
+    "windows/docs/LOCAL-LLM.md": {
+      "sha256": "e2be9460d012b22352ed89440bff803309413a86edeff12f590b1aff5231abe3",
+      "lines": 92,
+      "references": [
+        {
+          "note": "Windows本地模型网关",
+          "line": 1,
+          "locator": null
+        }
+      ]
+    },
+    "t3-source/packages/contracts/src/rpc.ts": {
+      "sha256": "8746ca6ccebef7f99ae77d048b7144818e5a82c9542ba7c75ca3d92733013769",
+      "lines": 1539,
+      "references": [
+        {
+          "note": "T3共享合同与协议包",
+          "line": 1275,
+          "locator": "const WsOrchestrationDispatchCommandRpc"
+        }
+      ]
+    },
+    "t3-source/packages/contracts/src/orchestration.ts": {
+      "sha256": "7982dc356de2116ec85c31d289a7f8cf227de52eb94bbcceb76763f6e2839224",
+      "lines": 2537,
+      "references": [
+        {
+          "note": "T3共享合同与协议包",
+          "line": 1,
+          "locator": null
+        }
+      ]
+    },
+    "t3-source/packages/effect-codex-app-server/package.json": {
+      "sha256": "e784da0b6b877b4226437906c26f8418c3b7bbe8bb84cf4f5e3dee79b41b0e8a",
+      "lines": 39,
+      "references": [
+        {
+          "note": "T3共享合同与协议包",
+          "line": 1,
+          "locator": null
+        }
+      ]
+    },
+    "t3-source/packages/effect-acp/package.json": {
+      "sha256": "088f8bac0f59e8bb5cd9fdd9156cd54bb0f229c487a3a3e46a3cecb082c48455",
+      "lines": 42,
+      "references": [
+        {
+          "note": "T3共享合同与协议包",
+          "line": 1,
+          "locator": null
+        }
+      ]
+    },
+    "t3-source/packages/shared/src/backgroundActivitySettings.ts": {
+      "sha256": "e0b2ca568d5235ebc0535ba14cee3b2f6068560793f7e15b2654911afe1b1896",
+      "lines": 270,
+      "references": [
+        {
+          "note": "T3共享合同与协议包",
+          "line": 1,
+          "locator": null
+        }
+      ]
+    },
+    "README.md": {
+      "sha256": "29bdc94293c6fcb8f14339115c0fd2bbc4efcb73dd5f54c4f7a0b97c459cd62a",
+      "lines": 293,
+      "references": [
+        {
+          "note": "架构与开发入口",
+          "line": 1,
+          "locator": null
+        }
+      ]
+    },
+    "docs/ARCHITECTURE.md": {
+      "sha256": "16e902f4b36d44c21dd4d887a6d913da172c55c2d1bb2476fc31c6db450104c5",
+      "lines": 53,
+      "references": [
+        {
+          "note": "架构与开发入口",
+          "line": 1,
+          "locator": null
+        }
+      ]
+    },
+    "docs/SETUP.md": {
+      "sha256": "062af678ea8d8a1fe88890339a16484f61fb1536a6dc0616382cb7a13909f5aa",
+      "lines": 119,
+      "references": [
+        {
+          "note": "架构与开发入口",
+          "line": 1,
+          "locator": null
+        }
+      ]
+    },
+    "windows/README-WINDOWS.md": {
+      "sha256": "ba79daf66d30a3b9880759c886600649f0e078aff848c9f7da04e56c1161c359",
+      "lines": 149,
+      "references": [
+        {
+          "note": "架构与开发入口",
+          "line": 1,
+          "locator": null
+        }
+      ]
+    },
+    "code/desktop-pet/package.json": {
+      "sha256": "2cb4ee030470ce43ed891f22983da6bfd3f2456ac6f7f55b7d7ef12262fdf565",
+      "lines": 38,
+      "references": [
+        {
+          "note": "架构与开发入口",
+          "line": 1,
+          "locator": null
+        }
+      ]
+    },
+    "windows/code/desktop-pet/package.json": {
+      "sha256": "d7e07b84285537954ea6b563cc217771de4b51faadd39403f5443fdf2e35133b",
+      "lines": 52,
+      "references": [
+        {
+          "note": "架构与开发入口",
+          "line": 1,
+          "locator": null
+        }
+      ]
+    },
+    "code/desktop-pet/tools/run-tests.mjs": {
+      "sha256": "8b06f23a367d0d44eae1899e152e817922f5c611d3a9927ba5232e13f53e94cc",
+      "lines": 22,
+      "references": [
+        {
+          "note": "架构与开发入口",
+          "line": 1,
+          "locator": null
+        }
+      ]
+    },
+    "windows/code/desktop-pet/tools/run-tests.mjs": {
+      "sha256": "7210c93be4813d8ddb8caafcce11bc4c0f5469c90f4dd7c075d84d82975d6e5d",
+      "lines": 23,
+      "references": [
+        {
+          "note": "架构与开发入口",
+          "line": 1,
+          "locator": null
+        }
+      ]
+    },
+    "t3-source/package.json": {
+      "sha256": "aedc7229c76a4b9ba6afb0ab54994579ec7ee7e500fe94ceda8f853fa829671c",
+      "lines": 64,
+      "references": [
+        {
+          "note": "架构与开发入口",
+          "line": 1,
+          "locator": null
+        }
+      ]
+    },
+    "t3-source/apps/web/package.json": {
+      "sha256": "e5aad07780550ae351ac33c55e0e6a284af7fc240c730f0c1506fcac294a0bd6",
+      "lines": 84,
+      "references": [
+        {
+          "note": "架构与开发入口",
+          "line": 1,
+          "locator": null
+        }
+      ]
+    },
+    "t3-source/apps/server/package.json": {
+      "sha256": "6d0815899db84a2fcd177655b6b8cfe11da0adef90ef35230bfda10b3b261578",
+      "lines": 55,
+      "references": [
+        {
+          "note": "架构与开发入口",
+          "line": 1,
+          "locator": null
+        }
+      ]
+    },
+    "t3-source/AAAAGENT-ASSEMBLY.md": {
+      "sha256": "92f3d340c49457c2a7e5f3bd857e94580599451af27e226e999ae9588d1cb32f",
+      "lines": 10,
+      "references": [
+        {
+          "note": "架构与开发入口",
+          "line": 1,
+          "locator": null
+        }
+      ]
+    },
+    "t3-source/CONTRIBUTING.md": {
+      "sha256": "8e187d0dfda758b582db934f461e4e89d5a637d18da4bf7f2756286483431341",
+      "lines": 76,
+      "references": [
+        {
+          "note": "架构与开发入口",
+          "line": 1,
+          "locator": null
+        }
+      ]
+    },
+    "t3-source/docs/operations/development.md": {
+      "sha256": "e5fd2223f0d7ecaa3a5d4bda8c8e42a4c1b68730d92d00f4d1464f0d8be7e32e",
+      "lines": 202,
+      "references": [
+        {
+          "note": "架构与开发入口",
+          "line": 1,
+          "locator": null
+        }
+      ]
+    },
+    ".github/workflows/windows.yml": {
+      "sha256": "3457b094e900a576f0fd418f443162fd118f2f86fde4c1f5c00ebec845608b90",
+      "lines": 32,
+      "references": [
+        {
+          "note": "架构与开发入口",
+          "line": 1,
+          "locator": null
+        }
+      ]
+    },
+    "code/workbench/integration/t3-unified-shell/CONTRACT.md": {
+      "sha256": "c3d414995e23a15aafa33a7f9acf120c0cb9a0b4d469f72c6ff9e3c20cd42a06",
+      "lines": 40,
+      "references": [
+        {
+          "note": "架构与开发入口",
+          "line": 1,
+          "locator": null
+        }
+      ]
+    },
+    "code/desktop-pet/contracts/management.ts": {
+      "sha256": "8a2deefeb32fcfa68a618d4c9fa36fc438cd9b5695a05d106360c582c0001c82",
+      "lines": 163,
+      "references": [
+        {
+          "note": "架构与开发入口",
+          "line": 1,
+          "locator": null
+        }
+      ]
+    },
+    "code/desktop-pet/companion/cloud/protocol.ts": {
+      "sha256": "11185a801d5fd3f1306557727238553bbe44f4d203955688c961d988736dce6b",
+      "lines": 59,
+      "references": [
+        {
+          "note": "架构与开发入口",
+          "line": 1,
+          "locator": null
+        }
+      ]
+    },
+    "t3-source/apps/web/src/connection/runtime.ts": {
+      "sha256": "c873cbac9f2d81d88ca6952c3de2ec169f4b441383c74a6f8cb94be621886a7a",
+      "lines": 57,
+      "references": [
+        {
+          "note": "架构与开发入口",
+          "line": 1,
+          "locator": null
+        }
+      ]
+    }
+  },
+  "modules": [
+    {
+      "id": "runtime",
+      "title": "运行时与对话编排",
+      "folder": "02-Runtime",
+      "deps": [
+        "memory",
+        "model-media",
+        "workbench",
+        "desktop",
+        "channels",
+        "management"
+      ]
+    },
+    {
+      "id": "memory",
+      "title": "私人记忆与上下文",
+      "folder": "03-Memory",
+      "deps": [
+        "runtime",
+        "model-media",
+        "management",
+        "social",
+        "workbench"
+      ]
+    },
+    {
+      "id": "model-media",
+      "title": "模型适配与媒体链路",
+      "folder": "04-Model-Media",
+      "deps": [
+        "runtime",
+        "memory",
+        "social",
+        "channels",
+        "local-models"
+      ]
+    },
+    {
+      "id": "social",
+      "title": "角色社交服务与缓存",
+      "folder": "05-Social",
+      "deps": [
+        "model-media",
+        "memory",
+        "channels",
+        "runtime"
+      ]
+    },
+    {
+      "id": "workbench",
+      "title": "工作执行与项目上下文",
+      "folder": "06-Workbench",
+      "deps": [
+        "runtime",
+        "memory",
+        "management",
+        "t3-server",
+        "t3-client",
+        "t3-packages"
+      ]
+    },
+    {
+      "id": "management",
+      "title": "管理服务与配置",
+      "folder": "07-Management",
+      "deps": [
+        "runtime",
+        "memory",
+        "workbench",
+        "channels",
+        "t3-client",
+        "desktop"
+      ]
+    },
+    {
+      "id": "channels",
+      "title": "微信与QQ渠道适配",
+      "folder": "08-Channels",
+      "deps": [
+        "runtime",
+        "model-media",
+        "management",
+        "social",
+        "workbench"
+      ]
+    },
+    {
+      "id": "t3-server",
+      "title": "T3服务端与事件编排",
+      "folder": "09-T3-Server",
+      "deps": [
+        "workbench",
+        "t3-client",
+        "t3-packages",
+        "desktop"
+      ]
+    },
+    {
+      "id": "t3-client",
+      "title": "T3客户端与共享状态",
+      "folder": "10-T3-Client",
+      "deps": [
+        "t3-server",
+        "t3-packages",
+        "desktop",
+        "management",
+        "workbench"
+      ]
+    },
+    {
+      "id": "desktop",
+      "title": "桌面宿主与平台边界",
+      "folder": "11-Desktop",
+      "deps": [
+        "runtime",
+        "model-media",
+        "management",
+        "t3-client",
+        "t3-server"
+      ]
+    },
+    {
+      "id": "local-models",
+      "title": "Windows本地模型网关",
+      "folder": "12-Local-Models",
+      "deps": [
+        "model-media",
+        "desktop"
+      ]
+    },
+    {
+      "id": "t3-packages",
+      "title": "T3共享合同与协议包",
+      "folder": "13-T3-Packages",
+      "deps": [
+        "t3-server",
+        "t3-client",
+        "desktop",
+        "workbench"
+      ]
+    }
+  ]
+}
